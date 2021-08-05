@@ -30,7 +30,7 @@ async def start(client, message):
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm AnyDL Bot
 
-I can download video or audio from Youtube. Made by @Uvindu_Bro 🇱🇰
+I can download video or audio from Youtube. Made by @omindas 🇱🇰
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -38,10 +38,10 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/UvinduBr")
+                                            "🌀Channel🇱🇰", url="https://t.me/UvinduBr")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/UvinduBro/AnyDL-Bot")
+                                            "📤Source Code📤", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -56,7 +56,7 @@ async def help(client, message):
 
 Just send a Youtube url to download it in video or audio format!
 
-~ @UvinduBro</b>""",
+~ @omindas</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -65,7 +65,7 @@ Just send a Youtube url to download it in video or audio format!
                                             "About ❕", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code 📦", url="https://github.com/UvinduBro/AnyDL-Bot")
+                                            "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -78,21 +78,21 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About AnyDL Bot!</b>
 
-<b>😉 Developer:</b> <a href="https://t.me/Uvindu_Bro">Uvindu Bro 🇱🇰</a>
+<b>😉 Developer:</b> <a href="https://t.me/omindas">Ominda 🇱🇰</a>
 
-<b>⁉ Support:</b> <a href="https://t.me/UvinduBr">Uvindu Bro</a>
+<b>⁉ Support:</b> <a href="https://t.me/sdbotworld">Uvindu Bro</a>
 
-<b>❤ Thanks:</b> <a href="https://t.me/Infinity_BOTs">Infinity BOTs</a>
+<b>❤ Thanks:</b> <a href="https://t.me/omindas">Ominda</a>
 
 <b>📚 Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
-<b>~ @UvinduBro</b>""",
+<b>~ @Ominda</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back ⬅", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code 📦", url="https://github.com/UvinduBro/AnyDL-Bot")
+                                            "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -170,7 +170,7 @@ async def send_audio(message: Message, info_dict, audio_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@UvinduBro - '+s2tw(info_dict['title'])
+    title = '@omindas - '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     performer = s2tw(info_dict['uploader'])
@@ -221,7 +221,7 @@ async def send_video(message: Message, info_dict, video_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@UvinduBro - '+s2tw(info_dict['title'])
+    title = '@omindas - '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     width, height = get_resolution(info_dict)
@@ -279,7 +279,7 @@ async def button(bot, update):
 print(
     """
 Bot Started!
-Join @UvinduBro
+Join @omindas
 """
 )
 
