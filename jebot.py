@@ -28,9 +28,9 @@ async def start(client, message):
        await message.reply_sticker("CAACAgUAAxkBAAIRbWB_meh14vG0OXP5hFHHpMODeJGkAAIzAgACx84BVC5bBOf8LUlLHwQ")
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm AnyDL Bot
+               text="""<b>🇱🇰 Hey There, I'm AnyDL Bot 👨‍💻
 
-I can download video or audio from Youtube. Made by @omindas 🇱🇰
+😇I can download video or audio from Youtube. Powerd By @sdprojectupdates 🌀 Made by @omindas 🇱🇰
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -38,10 +38,10 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "🌀Channel🇱🇰", url="https://t.me/UvinduBr")
+                                            "🌀Channel🇱🇰", url="https://t.me/sdprojectupdates")
                                     ],[
                                       InlineKeyboardButton(
-                                            "📤Source Code📤", url="https://github.com/omindadelshan/AnyDL-Bot")
+                                            "🔥 Developer 🔥", url="https://t.me/omindas")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -54,15 +54,15 @@ async def help(client, message):
                chat_id=message.chat.id,
                text="""<b>AnyDL Bot Help!
 
-Just send a Youtube url to download it in video or audio format!
+📌Just send a Youtube url to download it in video or audio format📤!
 
 ~ @omindas</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back ⬅", callback_data="start"),
+                                            "🔙Back 🔙", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About ❕", callback_data="about"),
+                                            "☢️About☢️", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
                                             "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
@@ -80,7 +80,7 @@ async def about(client, message):
 
 <b>😉 Developer:</b> <a href="https://t.me/omindas">Ominda 🇱🇰</a>
 
-<b>⁉ Support:</b> <a href="https://t.me/sdbotworld">Uvindu Bro</a>
+<b>⁉ Support:</b> <a href="https://t.me/sdprojectupdates">SD Bot World</a>
 
 <b>❤ Thanks:</b> <a href="https://t.me/omindas">Ominda</a>
 
@@ -90,7 +90,7 @@ async def about(client, message):
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Back ⬅", callback_data="help"),
+                                            "🔙Back🔙", callback_data="help"),
                                         InlineKeyboardButton(
                                             "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
