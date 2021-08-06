@@ -28,20 +28,20 @@ async def start(client, message):
        await message.reply_sticker("CAACAgUAAxkBAAIRbWB_meh14vG0OXP5hFHHpMODeJGkAAIzAgACx84BVC5bBOf8LUlLHwQ")
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>🇱🇰 Hey There, I'm AnyDL Bot 👨‍💻
+               text="""<b>🇱🇰 Hey There, I'm 🇱🇰SD AnyDL Bot 👨‍💻
 
 😇I can download video or audio from Youtube. Powerd By @sdprojectupdates 🌀 Made by @omindas 🇱🇰
 
-Hit help button to find out more about how to use me</b>""",   
+✔ Hit help button to find out more about how to use me✔👇👇👇</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "Help", callback_data="help"),
+                                            "⚡Help⚡", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "🌀Channel🇱🇰", url="https://t.me/sdprojectupdates")
+                                            " 🇱🇰Channel🇱🇰", url="https://t.me/sdprojectupdates")
                                     ],[
                                       InlineKeyboardButton(
-                                            "🔥 Developer 🔥", url="https://t.me/omindas")
+                                            " 🤛 Developer 🤜", url="https://t.me/omindas")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -52,20 +52,20 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>AnyDL Bot Help!
+               text="""<b>***Welcome To 🇱🇰SD AnyDL Help Room***!
 
-📌Just send a Youtube url to download it in video or audio format📤!
+🔴Just send a Youtube url to download it in video or audio format📤!
 
-~ @omindas</b>""",
+     ~ @omindas ~</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "🔙Back 🔙", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "☢️About☢️", callback_data="about"),
+                                            "💯About💯", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
+                                            "🔰Source Code🔰", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -78,13 +78,13 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About AnyDL Bot!</b>
 
-<b>😉 Developer:</b> <a href="https://t.me/omindas">Ominda 🇱🇰</a>
+<b>😉 Developer 😉:</b> <a href="https://t.me/omindas">Ominda 🇱🇰</a>
 
-<b>⁉ Support:</b> <a href="https://t.me/sdprojectupdates">SD Bot World</a>
+<b> 🔥Support🔥:</b> <a href="https://t.me/sdprojectupdates">SD Bot World</a>
 
-<b>❤ Thanks:</b> <a href="https://t.me/omindas">Ominda</a>
+<b>❤ Thanks❤️:</b> <a href="https://t.me/omindas">Ominda</a>
 
-<b>📚 Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
+<b>📚 Library 📚 :</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
 <b>~ @Ominda</b>""",
      reply_markup=InlineKeyboardMarkup(
@@ -92,7 +92,7 @@ async def about(client, message):
                                         InlineKeyboardButton(
                                             "🔙Back🔙", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
+                                            "🔭Source Code 📦", url="https://github.com/omindadelshan/AnyDL-Bot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -107,7 +107,7 @@ async def about(client, message):
                    & filters.regex(YTDL_REGEX))
 async def ytdl_with_button(_, message: Message):
     await message.reply_text(
-        "**Choose download type 🤗**",
+        "**😉Choose download type 🤗**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -140,7 +140,7 @@ async def callback_query_ytdl_audio(_, callback_query):
             await message.reply_chat_action("typing")
             info_dict = ydl.extract_info(url, download=False)
             # download
-            await callback_query.edit_message_text("**📥 Downloading audio... 📥**")
+            await callback_query.edit_message_text("**📥 Downloading audio ominda 📥**")
             ydl.process_info(info_dict)
             # upload
             audio_file = ydl.prepare_filename(info_dict)
@@ -196,7 +196,7 @@ async def callback_query_ytdl_video(_, callback_query):
             await message.reply_chat_action("typing")
             info_dict = ydl.extract_info(url, download=False)
             # download
-            await callback_query.edit_message_text("**📥 Downloading video... 📥**")
+            await callback_query.edit_message_text("**📥 Downloading video ominda📥**")
             ydl.process_info(info_dict)
             # upload
             video_file = ydl.prepare_filename(info_dict)
