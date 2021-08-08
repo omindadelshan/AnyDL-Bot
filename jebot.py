@@ -32,7 +32,8 @@ async def start(client, message):
 
 😇I can download video or audio from Youtube. Powerd By @sdprojectupdates 🌀 Made by @omindas 🇱🇰
 
-✔ Hit help button to find out more about how to use me✔👇👇👇</b>""",   
+
+👨‍💻 Hit help button Or Send👉 /help 👈command to find out more help how to use me👨‍💻 ⚡⚡And Send A👉 /about 👈commsnd is see A My About ⚡⚡   ~@omidas~</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -52,9 +53,9 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>***Welcome To 🇱🇰SD AnyDL Help Room***!
+               text="""<b>✳️Welcome To 🇱🇰SD AnyDL Help Room👨‍💻!
 
-🔴Just send a Youtube url to download it in video or audio format📤!
+🔴⚡ Just send a Youtube url to download it in video or audio format📤!
 
      ~ @omindas ~</b>""",
         reply_markup=InlineKeyboardMarkup(
@@ -62,7 +63,7 @@ async def help(client, message):
                                         InlineKeyboardButton(
                                             "🔙Back 🔙", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "💯About💯", callback_data="about"),
+                                            "👨‍💻About👨‍💻", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
                                             "🔰Source Code🔰", url="https://github.com/omindadelshan/AnyDL-Bot")
@@ -86,6 +87,8 @@ async def about(client, message):
 
 <b>📚 Library 📚 :</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
+🤗 My More Abouts Are Privetly✳️✳️...👨‍💻 🤖This Bot Last Update Is A 2021-08-08 🤖💥
+
 <b>~ @Ominda</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
@@ -107,16 +110,16 @@ async def about(client, message):
                    & filters.regex(YTDL_REGEX))
 async def ytdl_with_button(_, message: Message):
     await message.reply_text(
-        "**😉Choose download type 🤗**",
+        "**😉 🤓Choose download type🗣️ 🤗**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Audio 🎵",
+                        "💎 Audio 🎵",
                         callback_data="ytdl_audio"
                     ),
                     InlineKeyboardButton(
-                        "Video 🎬",
+                        "🎈 Video 🎬",
                         callback_data="ytdl_video"
                     )
                 ]
@@ -140,7 +143,7 @@ async def callback_query_ytdl_audio(_, callback_query):
             await message.reply_chat_action("typing")
             info_dict = ydl.extract_info(url, download=False)
             # download
-            await callback_query.edit_message_text("**📥 Downloading audio ominda 📥**")
+            await callback_query.edit_message_text("**📥 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑨𝒖𝒅𝒊𝒐 📥**")
             ydl.process_info(info_dict)
             # upload
             audio_file = ydl.prepare_filename(info_dict)
@@ -196,7 +199,7 @@ async def callback_query_ytdl_video(_, callback_query):
             await message.reply_chat_action("typing")
             info_dict = ydl.extract_info(url, download=False)
             # download
-            await callback_query.edit_message_text("**📥 Downloading video ominda📥**")
+            await callback_query.edit_message_text("**📩 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒊𝒏𝒈 𝑽𝒊𝒅𝒆𝒐 📥**")
             ydl.process_info(info_dict)
             # upload
             video_file = ydl.prepare_filename(info_dict)
