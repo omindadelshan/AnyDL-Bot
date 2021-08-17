@@ -25,10 +25,9 @@ s2tw = OpenCC('s2tw.json').convert
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await message.reply_sticker("CAACAgUAAxkBAAIRbWB_meh14vG0OXP5hFHHpMODeJGkAAIzAgACx84BVC5bBOf8LUlLHwQ")
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>🇱🇰 Hey There, I'm 🇱🇰SD AnyDL Bot 👨‍💻
+               text="""🇱🇰 Hey There, I'm 🇱🇰SD AnyDL Bot 👨‍💻
 
 😇I can download video or audio from Youtube. Powerd By @sdprojectupdates 🌀 Made by @omindas 🇱🇰
 
@@ -42,7 +41,7 @@ async def start(client, message):
                                             " 🇱🇰Channel🇱🇰", url="https://t.me/sdprojectupdates")
                                     ],[
                                       InlineKeyboardButton(
-                                            " 🤛 Developer 🤜", url="https://t.me/omindas")
+                                            "💎Developer💎", url="https://t.me/omindas")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -77,7 +76,7 @@ async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>About AnyDL Bot!</b>
+               text="""<b>🤔About AnyDL Bot🤔!</b>
 
 <b>😉 Developer 😉:</b> <a href="https://t.me/omindas">Ominda 🇱🇰</a>
 
@@ -89,7 +88,7 @@ async def about(client, message):
 
 🤗 My More Abouts Are Privetly✳️✳️...👨‍💻 🤖This Bot Last Update Is A 2021-08-08 🤖💥
 
-<b>~ @Ominda</b>""",
+<b>~ @Omindas</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
