@@ -25,7 +25,6 @@ s2tw = OpenCC('s2tw.json').convert
 @Jebot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_sticker("CAACAgUAAx0CSNPoMAACBm1hG4GlTvQ97FucqiBLPGApGuK36QACTwADO0qzKaWcJX-Qpt8\_IAQ")
        await Jebot.send_message(
                chat_id=message.chat.id,
                text="""🇱🇰 Hey There, I'm 🇱🇰SD AnyDL Bot 👨‍💻
